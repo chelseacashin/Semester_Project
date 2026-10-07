@@ -1,2 +1,2 @@
-# hello-world
-This repository is for practicing the GitHub Flow.
+# Market Assistant Project 
+This repository is for our Market Assistant Project.
