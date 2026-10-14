@@ -1,23 +1,128 @@
 Milestone 1 of Mini Market Terminal: Stock Market Information. Chelsea Cashin and Samuel Vasquez-Maces
 
+UML
+class Main {
+    + main(args: String[]): void
+}
 
-Main
-  |
-  v
-MarketTerminal
-  |
-  ----> MarketDataManager
-  |             |
-  |             v
-  |           Stock
-  |             |
-  |             v
-  |        PriceRecord
-  |
-  ----> MarketAnalyzer
-              |
-              v
-     MarketAnalysisResult
+class MarketTerminal {
+    - dataManager: MarketDataManager
+    - analyzer: MarketAnalyzer
+    - scanner: Scanner
+
+    + MarketTerminal()
+    + start(): void
+    - searchStock(): void
+    - viewHistoricalData(): void
+    - analyzeStock(): void
+    - displayAnalysis(
+        ticker: String,
+        startDate: LocalDate,
+        endDate: LocalDate,
+        result: MarketAnalysisResult
+      ): void
+}
+
+class MarketDataManager {
+    - stocks: Map<String, Stock>
+
+    + MarketDataManager()
+    + loadData(folderPath: String): void
+    - loadStockFile(file: File): void
+    + getStock(ticker: String): Stock
+    + hasStock(ticker: String): boolean
+    + getStocks(): Map<String, Stock>
+}
+
+class Stock {
+    - ticker: String
+    - records: List<PriceRecord>
+
+    + Stock(ticker: String)
+    + getTicker(): String
+    + getRecords(): List<PriceRecord>
+    + addRecord(record: PriceRecord): void
+    + getRecordsBetween(
+        startDate: LocalDate,
+        endDate: LocalDate
+      ): List<PriceRecord>
+}
+
+class PriceRecord {
+    - date: LocalDate
+    - open: double
+    - high: double
+    - low: double
+    - close: double
+    - volume: long
+
+    + PriceRecord(
+        date: LocalDate,
+        open: double,
+        high: double,
+        low: double,
+        close: double,
+        volume: long
+      )
+
+    + getDate(): LocalDate
+    + getOpen(): double
+    + getHigh(): double
+    + getLow(): double
+    + getClose(): double
+    + getVolume(): long
+    + toString(): String
+}
+
+class MarketAnalyzer {
+    + analyze(records: List<PriceRecord>): MarketAnalysisResult
+}
+
+class MarketAnalysisResult {
+    - highestClosingPrice: double
+    - lowestClosingPrice: double
+    - averageClosingPrice: double
+    - percentagePriceChange: double
+    - averageTradingVolume: double
+    - bestTradingDay: LocalDate
+    - bestTradingDayChange: double
+    - worstTradingDay: LocalDate
+    - worstTradingDayChange: double
+
+    + MarketAnalysisResult(
+        highestClosingPrice: double,
+        lowestClosingPrice: double,
+        averageClosingPrice: double,
+        percentagePriceChange: double,
+        averageTradingVolume: double,
+        bestTradingDay: LocalDate,
+        bestTradingDayChange: double,
+        worstTradingDay: LocalDate,
+        worstTradingDayChange: double
+      )
+
+    + getHighestClosingPrice(): double
+    + getLowestClosingPrice(): double
+    + getAverageClosingPrice(): double
+    + getPercentagePriceChange(): double
+    + getAverageTradingVolume(): double
+    + getBestTradingDay(): LocalDate
+    + getBestTradingDayChange(): double
+    + getWorstTradingDay(): LocalDate
+    + getWorstTradingDayChange(): double
+}
+
+Main --> MarketTerminal
+
+MarketTerminal --> MarketDataManager
+MarketTerminal --> MarketAnalyzer
+MarketTerminal --> MarketAnalysisResult
+
+MarketDataManager "1" --> "0..*" Stock
+Stock "1" o-- "0..*" PriceRecord
+
+MarketAnalyzer ..> PriceRecord : uses
+MarketAnalyzer --> MarketAnalysisResult
 
 
 Explain:
