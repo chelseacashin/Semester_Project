@@ -6,7 +6,7 @@ Main
   v
 MarketTerminal
   |
-  +----> MarketDataManager
+  ----> MarketDataManager
   |             |
   |             v
   |           Stock
@@ -14,7 +14,7 @@ MarketTerminal
   |             v
   |        PriceRecord
   |
-  +----> MarketAnalyzer
+  ----> MarketAnalyzer
               |
               v
      MarketAnalysisResult
