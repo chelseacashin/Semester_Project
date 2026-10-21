@@ -169,5 +169,12 @@ MarketTerminal: Provides the text-based user interface and manages interaction w
 
 Screenshots of the code running:
 
+Code running program, loading files, and searching a stock:
 <img width="377" height="712" alt="MarketTerminal_Running1" src="https://github.com/user-attachments/assets/298e1b97-dbae-46c2-9f67-b59be398e322" />
+
+Code Running Stock Anaylsis:
 <img width="482" height="707" alt="MarketTerminal_Running2" src="https://github.com/user-attachments/assets/77d0c6fb-5e3d-447b-b7be-bdd3273e409d" />
+
+Code Running view Historical Data:
+<img width="987" height="692" alt="MarketTerminal_Running3" src="https://github.com/user-attachments/assets/625cc597-5989-4007-a754-50f92aca752b" />
+
