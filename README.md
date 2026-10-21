@@ -115,13 +115,17 @@ class MarketAnalysisResult {
 Main --> MarketTerminal
 
 MarketTerminal --> MarketDataManager
+
 MarketTerminal --> MarketAnalyzer
+
 MarketTerminal --> MarketAnalysisResult
 
 MarketDataManager "1" --> "0..*" Stock
+
 Stock "1" o-- "0..*" PriceRecord
 
 MarketAnalyzer ..> PriceRecord : uses
+
 MarketAnalyzer --> MarketAnalysisResult
 
 
