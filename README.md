@@ -166,3 +166,6 @@ MarketDataManager: Loads historical stock data from CSV files and manages the av
 MarketAnalyzer: Performs calculations on stock data.
 MarketAnalysisResult: Stores the results produced by MarketAnalyzer.
 MarketTerminal: Provides the text-based user interface and manages interaction with the user.
+
+<img width="377" height="712" alt="MarketTerminal_Running1" src="https://github.com/user-attachments/assets/1ff995d9-9bfb-42e4-b344-86f56a95bfd5" />
+<img width="375" height="151" alt="lab2_samvm" src="https://github.com/user-attachments/assets/467dc9c6-2158-4643-9af3-cbb9540791b3" />
