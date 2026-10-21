@@ -112,21 +112,23 @@ class MarketAnalysisResult {
     + getWorstTradingDayChange(): double
 }
 
-Main --> MarketTerminal
+Flow of program running:
 
-MarketTerminal --> MarketDataManager
-
-    MarketDataManager "1" --> "0..*" Stock
-
-        Stock "1" o-- "0..*" PriceRecord
-
-MarketTerminal --> MarketAnalyzer
-
-    MarketAnalyzer ..> PriceRecord : uses
-
-    MarketAnalyzer --> MarketAnalysisResult
-
-MarketTerminal --> MarketAnalysisResult
+    Main --> MarketTerminal
+    
+        MarketTerminal --> MarketDataManager
+        
+            MarketDataManager "1" --> "0..*" Stock
+        
+                Stock "1" o-- "0..*" PriceRecord
+        
+        MarketTerminal --> MarketAnalyzer
+        
+            MarketAnalyzer ..> PriceRecord : uses
+        
+            MarketAnalyzer --> MarketAnalysisResult
+        
+        MarketTerminal --> MarketAnalysisResult
 
 
 
