@@ -167,5 +167,7 @@ MarketAnalyzer: Performs calculations on stock data.
 MarketAnalysisResult: Stores the results produced by MarketAnalyzer.
 MarketTerminal: Provides the text-based user interface and manages interaction with the user.
 
-<img width="377" height="712" alt="MarketTerminal_Running1" src="https://github.com/user-attachments/assets/1ff995d9-9bfb-42e4-b344-86f56a95bfd5" />
-<img width="375" height="151" alt="lab2_samvm" src="https://github.com/user-attachments/assets/467dc9c6-2158-4643-9af3-cbb9540791b3" />
+Screenshots of the code running:
+
+<img width="482" height="707" alt="MarketTerminal_Running2" src="https://github.com/user-attachments/assets/77d0c6fb-5e3d-447b-b7be-bdd3273e409d" />
+<img width="377" height="712" alt="MarketTerminal_Running1" src="https://github.com/user-attachments/assets/298e1b97-dbae-46c2-9f67-b59be398e322" />
