@@ -129,7 +129,7 @@ Explain:
 This Java application loads historical stock market data from CSV files and allows users to search for stocks, view historical data, and analyze stock performance over a selected date range.
 How to Run:
 1. Open the project 
-2. Make sure the data folder is located in the main project folder.
+2. Make sure the data folder is located in the main project folder AND named "data".
 3. Run Main.java.
 4. Select an option from the menu.
 Menu Options:
